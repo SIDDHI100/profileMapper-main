@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   backend:
-    build: ./profileMapper-main/profileMapBackend
+    build: ./profileMapBackend
     ports:
-      - "5050:5050"
+      - "3000:3000"
     networks:
       - mern_network
     environment:
@@ -13,13 +13,13 @@ services:
       - mongodb
 
   frontend:
-    build: ./profileMapper-main/profileMapFrontend
+    build: ./profileMapFrontend
     ports:
       - "5173:5173"
     networks:
       - mern_network
     environment:
-      REACT_APP_API_URL: http://backend:5050
+      REACT_APP_API_URL: http://backend:3000
 
   mongodb:
     image: mongo:latest
