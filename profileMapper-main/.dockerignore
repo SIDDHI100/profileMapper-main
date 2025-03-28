@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.env
+
+./profileMapBackend/node_modules
+./profileMapFrontend/node_modules
